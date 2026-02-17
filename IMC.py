@@ -57,11 +57,13 @@ if st.button("Calculer mon IMC"):
 
 st.markdown("___")
 
-st.header("Votre zone de confort")
+st.header("Votre zone d'équilibre")
+st.write("L'IMC est un indicateur, mais votre bien-être est un objectif concret. Cette section vous aide à visualiser votre poids de forme : celui qui protège votre cœur, préserve vos articulations et booste votre énergie quotidienne. Plutôt que de viser un chiffre fixe, découvrez l'intervalle de poids qui correspond à votre morphologie pour une santé durable.")
 poids_min = 18.5*(taille**2)
 poids_max = 25*(taille**2)
-st.write("Le poids idéal n'est pas un chiffre unique, mais une zone de santé où votre corps fonctionne de manière optimale. Pour votre taille de",taille, "m, cette zone se situe entre,",poids_min, "kg et,", poids_max, "kg.")
-
+if st.button("Determiner mon poids idéal"):
+    st.write("Pour votre taille de",taille, "m, cette zone se situe entre,",poids_min, "kg et,", poids_max, "kg.")
+    
 st.markdown("___")
 
 st.header("Classification")
