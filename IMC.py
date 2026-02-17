@@ -6,7 +6,7 @@ st.write("L'indice de Masse Corporelle (IMC) est bien plus qu'un simple chiffre 
 
 st.markdown("___")
 
-st.header("📏 Déterminer mon IMC")
+st.header("Déterminer mon IMC")
 
 poids=st.number_input("Veuillez entrer votre poids (kg)")
 taille=st.number_input("Veuillez entrer votre taille (m)")
@@ -19,7 +19,7 @@ if st.button("Calculer mon IMC"):
         if imc<18.5:
             st.warning("Catégorie : Maigre")
             st.markdown("___")
-            st.header("💡 Conseils")
+            st.header("Conseils")
             st.write("""
             - Alimentation : Augmentez l'apport calorique avec des aliments denses (noix, avocats, huiles végétales).
             - Activité : Privilégiez le renforcement musculaire (musculation douce) pour gagner de la masse saine plutot que de faire trop de cardio.
@@ -28,7 +28,7 @@ if st.button("Calculer mon IMC"):
         elif 18.5<=imc<25:
             st.success("Catégorie : Normal")
             st.markdown("___")
-            st.header("💡 Conseils")
+            st.header("Conseils")
             st.write("""
             - Alimentation : Continuez à manger varié et équilibré sans restrictions inutiles.
             - Activité : Variez les plaisirs ! Un mélange de cardio (course, vélo) et de souplesse (yoga, étirements) est idéal.
@@ -37,7 +37,7 @@ if st.button("Calculer mon IMC"):
         elif 25<=imc<30:
             st.warning("Catégorie : Surpoids")
             st.markdown("___")
-            st.header("💡 Conseils")
+            st.header("Conseils")
             st.write("""
             - Alimentation : Réduisez les sucres rapides et les produits transformés. Priviligiez les fibres (légumes, céréales complétes).
             - Activité : Visez au moins 30 minutes de marche rapide ou d'activité modérée par jour.
@@ -46,7 +46,7 @@ if st.button("Calculer mon IMC"):
         elif imc>=30:
             st.warning("Catégorie : Obése")
             st.markdown("___")
-            st.header("💡 Conseils")
+            st.header("Conseils")
             st.write("""
             - Alimentation : Il est conseillé de consulter un nutritionniste pour un plan adapté sans carences.
             - Activité : Privilégiez les activités "portées" pour protéger vos articulations (natation, aquagym, vélo).
@@ -57,19 +57,19 @@ if st.button("Calculer mon IMC"):
 
 st.markdown("___")
 
-st.header("🎯 Objectif Santé")
+st.header("Objectif Santé")
 poids_min = 18.5*(taille**2)
 poids_max = 25*(taille**2)
 st.write("Le poids idéal n'est pas un chiffre unique, mais une zone de santé où votre corps fonctionne de manière optimale. Pour votre taille de",taille, "m, cette zone se situe entre,",poids_min, "kg et,", poids_max, "kg.")
 
 st.markdown("___")
 
-st.header("📊 Classification")
+st.header("Classification")
 st.image("IMC.jpg")
 
 st.markdown("___")
 
-st.header("✅ Importance de connaitre son IMC")
+st.header("Importance de connaitre son IMC")
 st.write("""
 **Identifier les risques pour la santé**
 
@@ -94,7 +94,7 @@ L'IMC est une mesure universelle. Que vous voyiez un médecin à Dakar, New York
 
 st.markdown("___")
 
-st.header("🛑 Les limites de l'IMC")
+st.header("Les limites de l'IMC")
 st.write("""
 L'IMC est un outil précieux mais imparfait. Il ne faut pas le prendre comme une vérité absolue car il ne fait pas la différence entre :
 - Le muscle et la graisse : Un athlète très musclé peut avoir un IMC "obèse" alors qu'il a très peu de masse grasse.
