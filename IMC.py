@@ -57,7 +57,7 @@ if st.button("Calculer mon IMC"):
 
 st.markdown("___")
 
-st.header("Objectif Santé")
+st.header("Votre zone de confort")
 poids_min = 18.5*(taille**2)
 poids_max = 25*(taille**2)
 st.write("Le poids idéal n'est pas un chiffre unique, mais une zone de santé où votre corps fonctionne de manière optimale. Pour votre taille de",taille, "m, cette zone se situe entre,",poids_min, "kg et,", poids_max, "kg.")
