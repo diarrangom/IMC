@@ -12,7 +12,10 @@ poids=st.number_input("Veuillez entrer votre poids (kg)")
 taille=st.number_input("Veuillez entrer votre taille (m)")
 
 if st.button("Calculer mon IMC"):
-    if poids<=2 :
+    if taille==0 or poids==0:
+        st.warning("🛑 La taille ne peux pas etre égale à 0. Le calcul est impossible.")
+        
+    elif poids<=2 :
         st.warning("🛑 Le poids est trop faible pour un calcul d'IMC.")
 
     elif poids>635:
@@ -62,9 +65,6 @@ if st.button("Calculer mon IMC"):
             - Alimentation : Il est conseillé de consulter un nutritionniste pour un plan adapté sans carences.
             - Activité : Privilégiez les activités "portées" pour protéger vos articulations (natation, aquagym, vélo).
             - Santé : Un suivi médical est recommandé pour surveillez la tension et le taux de sucre.""")
-
-    else:
-        st.info("🛑 La taille ne peux pas etre égale à 0. Le calcul est impossible.")
 
 st.markdown("___")
 
