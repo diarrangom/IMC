@@ -16,7 +16,7 @@ if st.button("Calculer mon IMC"):
         st.warning("🛑 Le poids est trop faible pour un calcul d'IMC")
 
     elif poids>635:
-            st.warning("🛑 Valeur Impossible. Le poids saisi dépasse le record mondial enregistré (635 kg). Veuillez vérifier votre saisie")
+        st.warning("🛑 Valeur Impossible. Le poids saisi dépasse le record mondial enregistré (635 kg). Veuillez vérifier votre saisie")
 
     elif poids>300:
         st.warning("🛑 Attention ! L'IMC n'est plus un indicateur fiable pour des poids supérieurs à 300kg. Consultez un spécialiste.")
