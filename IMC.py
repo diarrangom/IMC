@@ -25,7 +25,7 @@ if st.button("Calculer mon IMC"):
         st.warning("🛑 La taille est trop faible pour un calcul d'IMC.")
 
     elif taille>2.51:
-        st.warning("🛑 Valeur Impossible. La taille saisi dépasse le record du monde enregistré (2.51m). Veuillez vérifier votre saisie")
+        st.warning("🛑 Valeur Impossible. La taille saisie dépasse le record du monde enregistré (2.51m). Veuillez vérifier votre saisie")
         
     elif taille>0:
         imc= poids/(taille**2)
