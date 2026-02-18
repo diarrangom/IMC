@@ -13,7 +13,7 @@ taille=st.number_input("Veuillez entrer votre taille (m)")
 
 if st.button("Calculer mon IMC"):
     if taille==0 or poids==0:
-        st.warning("🛑 La taille ne peux pas etre égale à 0. Le calcul est impossible.")
+        st.warning("🛑 Les données demandées ne peuvent pas etre égale à 0. Le calcul est impossible.")
         
     elif poids<=2 :
         st.warning("🛑 Le poids est trop faible pour un calcul d'IMC.")
