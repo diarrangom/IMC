@@ -19,7 +19,7 @@ if st.button("Calculer mon IMC"):
         imc= poids/(taille**2)
         st.write(imc)
 
-        elif poids<=2 :
+        if poids<=2 :
             st.warning("🛑 Le poids est trop faible pour un calcul d'IMC")
 
         elif taille>2.51:
