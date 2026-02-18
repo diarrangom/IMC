@@ -12,22 +12,24 @@ poids=st.number_input("Veuillez entrer votre poids (kg)")
 taille=st.number_input("Veuillez entrer votre taille (m)")
 
 if st.button("Calculer mon IMC"):
-    if taille<=0.5:
+    if poids<=2 :
+        st.warning("🛑 Le poids est trop faible pour un calcul d'IMC")
+
+    elif poids>300:
+        st.warning("🛑 Attention ! L'IMC n'est plus un indicateur fiable pour des poids supérieurs à 300kg. Consultez un spécialiste.")
+        
+    elif poids>635:
+        st.warning("🛑 Valeur Impossible. Le poids saisi dépasse le record mondial enregistré (635 kg). Veuillez vérifier votre saisie")
+
+    elif taille<=0.5:
         st.warning("🛑 Cette taille semble correspondre à un nourrisson. L'IMC standard ne s'applique pas de la meme maniére")
         
-    if taille>0:
+    elif taille>0:
         imc= poids/(taille**2)
         st.write(imc)
 
-        if poids<=2 :
-            st.warning("🛑 Le poids est trop faible pour un calcul d'IMC")
-
-        elif taille>2.51:
-            st.warning("🛑 Valeur Impossible. La taille saisi dépasse le record du monde enregistré (2.51m). Veuillez vérifier votre saisie")
-            
-        elif imc<18.5:
+        if imc<18.5:
             st.warning("Catégorie : Maigre")
-            st.markdown("___")
             st.header("Conseils")
             st.write("""
             - Alimentation : Augmentez l'apport calorique avec des aliments denses (noix, avocats, huiles végétales).
@@ -36,7 +38,6 @@ if st.button("Calculer mon IMC"):
             
         elif 18.5<=imc<25:
             st.success("Catégorie : Normal")
-            st.markdown("___")
             st.header("Conseils")
             st.write("""
             - Alimentation : Continuez à manger varié et équilibré sans restrictions inutiles.
@@ -45,7 +46,6 @@ if st.button("Calculer mon IMC"):
             
         elif 25<=imc<30:
             st.warning("Catégorie : Surpoids")
-            st.markdown("___")
             st.header("Conseils")
             st.write("""
             - Alimentation : Réduisez les sucres rapides et les produits transformés. Priviligiez les fibres (légumes, céréales complétes).
@@ -54,18 +54,14 @@ if st.button("Calculer mon IMC"):
 
         elif imc>=30:
             st.warning("Catégorie : Obése")
-            st.markdown("___")
             st.header("Conseils")
             st.write("""
             - Alimentation : Il est conseillé de consulter un nutritionniste pour un plan adapté sans carences.
             - Activité : Privilégiez les activités "portées" pour protéger vos articulations (natation, aquagym, vélo).
             - Santé : Un suivi médical est recommandé pour surveillez la tension et le taux de sucre.""")
-        
-        elif poids> 300:
-            st.warning("🛑 Attention ! L'IMC n'est plus un indicateur fiable pour des poids supérieurs à 300kg. Consultez un spécialiste.")
-        
-        elif poids>635:
-            st.warning("🛑 Valeur Impossible. Le poids saisi dépasse le record mondial enregistré (635 kg). Veuillez vérifier votre saisie")
+
+    elif taille>2.51:
+        st.warning("🛑 Valeur Impossible. La taille saisi dépasse le record du monde enregistré (2.51m). Veuillez vérifier votre saisie")
 
     else:
         st.info("🛑 La taille ne peux pas etre égale à 0. Le calcul est impossible.")
