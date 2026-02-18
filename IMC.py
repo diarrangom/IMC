@@ -13,16 +13,16 @@ taille=st.number_input("Veuillez entrer votre taille (m)")
 
 if st.button("Calculer mon IMC"):
     if poids<=2 :
-        st.warning("🛑 Le poids est trop faible pour un calcul d'IMC")
+        st.warning("🛑 Le poids est trop faible pour un calcul d'IMC.")
 
     elif poids>635:
-        st.warning("🛑 Valeur Impossible. Le poids saisi dépasse le record mondial enregistré (635 kg). Veuillez vérifier votre saisie")
+        st.warning("🛑 Valeur Impossible. Le poids saisi dépasse le record mondial enregistré (635 kg). Veuillez vérifier votre saisie.")
 
     elif poids>300:
         st.warning("🛑 Attention ! L'IMC n'est plus un indicateur fiable pour des poids supérieurs à 300kg. Consultez un spécialiste.")
         
     elif taille<=0.5:
-        st.warning("🛑 Cette taille semble correspondre à un nourrisson. L'IMC standard ne s'applique pas de la meme maniére")
+        st.warning("🛑 La taille est trop faible pour un calcul d'IMC.")
         
     elif taille>0:
         imc= poids/(taille**2)
