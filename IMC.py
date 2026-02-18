@@ -51,9 +51,24 @@ if st.button("Calculer mon IMC"):
             - Alimentation : Il est conseillé de consulter un nutritionniste pour un plan adapté sans carences.
             - Activité : Privilégiez les activités "portées" pour protéger vos articulations (natation, aquagym, vélo).
             - Santé : Un suivi médical est recommandé pour surveillez la tension et le taux de sucre.""")
+            
+    elif taille<=0.5:
+        st.warning("🛑 Cette taille semble correspondre à un nourrisson. L'IMC standard ne s'applique pas de la meme maniére")
+
+    elif taille>2.51:
+        st.warning("🛑 Valeur Impossible. La taille saisi dépasse le record du monde enregistré (2.51m). Veuillez vérifier votre saisie")
+
+    elif poids<=2:
+        st.warning("🛑 Le poids est trop faible pour un calcul d'IMC")
+
+    elif poid> 300:
+        st.warning("🛑 Attention ! L'IMC n'est plus un indicateur fiable pour des poids supérieurs à 300kg. Consultez un spécialiste.")
+
+    elif poids>635:
+        st.warning("🛑 Valeur Impossible. Le poids saisi dépasse le record mondial enregistré (635 kg). Veuillez vérifier votre saisie")
         
-        else:
-            st.info("La taille doit etre supérieur à 0")
+    else:
+        st.info("🛑 La taille ne peux pas etre égale à 0. Le calcul est impossible.")
 
 st.markdown("___")
 
