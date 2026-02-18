@@ -12,13 +12,13 @@ poids=st.number_input("Veuillez entrer votre poids (kg)")
 taille=st.number_input("Veuillez entrer votre taille (m)")
 
 if st.button("Calculer mon IMC"):
+    if taille<=0.5:
+        st.warning("🛑 Cette taille semble correspondre à un nourrisson. L'IMC standard ne s'applique pas de la meme maniére")
+        
     if taille>0:
         imc= poids/(taille**2)
         st.write(imc)
 
-        if taille<=0.5:
-            st.warning("🛑 Cette taille semble correspondre à un nourrisson. L'IMC standard ne s'applique pas de la meme maniére")
-        
         elif poids<=2:
             st.warning("🛑 Le poids est trop faible pour un calcul d'IMC")
 
